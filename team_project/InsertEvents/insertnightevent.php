@@ -59,9 +59,9 @@ session_start();
 <div class="form">
     <h1>Events</h1>
     <p>
-    You have Created an Event
+    You have Created a NightLife Event
     </p>
-    <a href="../index.php"><button class="button button-block"/>Home</button></a>
+    <a href="../NightLife.php"><button class="button button-block"/>Nightlife Events</button></a>
 </div>
 </body>
 </html>

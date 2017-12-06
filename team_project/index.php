@@ -3,14 +3,12 @@
 ?>
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Project Cherry</title>
+        <title>Cherri Picker - Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -18,7 +16,7 @@
         <!--Google Fonts link-->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
-
+       
 
         <link rel="stylesheet" href="assets/css/iconfont.css">
         <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -75,7 +73,7 @@
                                                 <li><a href="#home">HOME</a></li>
                                                 <!-- <li><a href="#history">ABOUT US</a></li> -->
                                                 <!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
-                                                <li><a href="#pricing">Awards</a></li>
+                                                <li><a href="#pricing">AWARDS</a></li>
                                                 <li><a href="#team">TEAM</a></li>
                                                 <!-- <li><a href="#blog">BLOG</a></li> -->
                                                 <li><a href="#contact">CONTACT</a></li>
@@ -119,51 +117,19 @@
                                             <div class="main_home wow fadeInUp" data-wow-duration="700ms">
                                                
                                                 <h3>The Best Events Are Our First Priority</h3>
-                                                <h1>WELCOME TO PROJECT CHERRY</h1>
+                                                <h1>WELCOME TO CHERRI PICKER</h1>
                                                 <div class="separator"></div>
-                                                <p>Project Cherry is a beginning and end to figuring out what you're going to do today, 
-                                                    next weekend, and which race you're going to train for in 6 weeks time. 
-                                                    With us we inform you of the best events nearest to you.</p>
+                                                <p>Cherri Picker is a website that helps you figuring out what you're going to do today, tomorrow, or 
+                                                    next weekend. 
+                                                    With us we inform you of the best events happening nearest to you.</p>
                                                 <div class="home_btn">
-                                                    <a href="Sport.php" target="_blank" class="btn btn-default ">Sport</a>
-                                                    <a href="NightLife.php" target="_blank" class="btn btn-default">NightLife</a>
-													<a href="Culture.php" target="_blank" class="btn btn-default">Culture</a>
+                                                    <a href="Sport.php"  class="btn btn-default ">Sport Events</a>
+                                                    <a href="NightLife.php"  class="btn btn-default">NightLife Events</a>
+													<a href="Culture.php"  class="btn btn-default">Culture Events</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--
-                                        <div class="single_home_slider">
-                                            <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                                <h3>The Best Events Are Our First Priority</h3>
-                                                <h1>WELCOME TO PROJECT CHERRY</h1>
-                                                <div class="separator"></div>
-                                                <p>Project Cherry is a beginning and end to figuring out what you're going to do today, 
-                                                    next weekend, and which race you're going to train for in 6 weeks time. 
-                                                    With us we inform you of the best events nearest to you.</p>
-                                                <div class="home_btn">
-                                                    <a href="Sport.html" target="_blank" class="btn btn-default ">Sport</a>
-                                                    <a href="NightLife.html" target="_blank" class="btn btn-default">NightLife</a>
-													<a href="Culture.html" target="_blank" class="btn btn-default">Culture</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        -->
-                                        <!--
-                                        <div class="single_home_slider">
-                                            <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                                <h3>The Best Events Are Our First Priority</h3>
-                                                <h1>WELCOME TO PROJECT CHERRY</h1>
-                                                <div class="separator"></div>
-                                                <p>Project Cherry is a beginning and end to figuring out what you're going to do today, 
-                                                    next weekend, and which race you're going to train for in 6 weeks time. 
-                                                    With us we inform you of the best events nearest to you.</p>
-                                                <div class="home_btn">
-                                                    <a href="Sport.html" target="_blank" class="btn btn-default ">Sport</a>
-                                                    <a href="NightLife.html" target="_blank" class="btn btn-default">NightLife</a>
-													<a href="Culture.html" target="_blank" class="btn btn-default">Culture</a>
-                                                </div>
-                                                -->
+                                    
 
                                             </div>
                                         </div>
@@ -178,445 +144,12 @@
             </section><!--End of home section -->
 
 
-            <!--feature section -->
-			<!--
-            <section id="feature" class="feature sections">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_feature text-center">
-
-                            <div class="col-sm-3">
-                                <div class="single_feature">
-                                    <div class="single_feature_icon">
-                                        <i class="fa fa-clone"></i>
-                                    </div>
-
-                                    <h4>SLEEK DESIGN</h4>
-                                    <div class="separator3"></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                        Lorem Ipsum has been the industry.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="single_feature">
-                                    <div class="single_feature_icon">
-                                        <i class="fa fa-heart-o"></i>
-                                    </div>
-
-                                    <h4>CLEAN CODE</h4>
-                                    <div class="separator3"></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                        Lorem Ipsum has been the industry.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="single_feature">
-                                    <div class="single_feature_icon">
-                                        <i class="fa fa-lightbulb-o"></i>
-                                    </div>
-                                    <h4>CREATIVE IDEAS</h4>
-                                    <div class="separator3"></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                        Lorem Ipsum has been the industry.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="single_feature">
-                                    <div class="single_feature_icon">
-                                        <i class="fa fa-comments-o"></i>
-                                    </div>
-
-                                    <h4>FREE SUPPORT</h4>
-                                    <div class="separator3"></div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                        Lorem Ipsum has been the industry.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--End of container -->
-            </section><!--End of feature Section -->
-            <hr/>
+           
 			
 			
 
 
-            <!-- History section -->
-			<!--
-            <section id="history" class="history sections">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_history">
-                            <div class="col-sm-6">
-                                <div class="single_history_img">
-                                    <img src="assets/images/stab1.png" alt="" />
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <div class="single_history_content">
-                                    <div class="head_title">
-                                        <h2>OUR HISTORY</h2>
-                                    </div>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page 
-                                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-                                        distribution of letters, as opposed to using 'Content here, content here', making it 
-                                        look like readable English. Many desktop publishing packages and web page editors now use 
-                                        Lorem Ipsum as their default model text, and a search for 'lorem ipsum' </p>
-
-                                    <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--End of row -->
-                </div><!--End of container -->
-            </section><!--End of history -->
-
-
-            <!-- service Section -->
-			<!--
-            <section id="service" class="service">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="main_service">
-                            <div class="col-md-6 col-sm-12 no-padding">
-
-                                <div class="single_service single_service_text text-right">
-                                    <div class="head_title">
-                                        <h2>OUR SERVICES</h2>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-                                            <div class="row">
-
-                                                <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-                                                    <article class="single_service_right_text">
-                                                        <h4>WEB DESIGN</h4>
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                            Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                                                    </article>
-                                                </div>
-                                                <div class="col-sm-1 col-xs-1">
-                                                    <figure class="single_service_icon">
-                                                        <i class="fa fa-heart"></i>
-                                                    </figure><!-- End of figure -->
-													<!--
-                                                </div>
-                                            </div>
-                                        </div><!-- End of col-sm-12 -->
-<!--
-                                        <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-                                            <div class="row">
-
-                                                <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-                                                    <article class="single_service_right_text">
-                                                        <h4>PRINT DESIGN</h4>
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                            Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                                                    </article>
-                                                </div>
-                                                <div class="col-sm-1 col-xs-1">
-                                                    <figure class="single_service_icon">
-                                                        <i class="fa fa-heart"></i>
-                                                    </figure><!-- End of figure -->
-                                                </div>
-                                            </div>
-                                        </div><!-- End of col-sm-12 -->
-<!--
-                                        <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-                                            <div class="row">
-
-                                                <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-                                                    <article class="single_service_right_text">
-                                                        <h4>PHOTOGRAPHY</h4>
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                            Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                                                    </article>
-                                                </div>
-                                                <div class="col-sm-1 col-xs-1">
-                                                    <figure class="single_service_icon">
-                                                        <i class="fa fa-heart"></i>
-                                                    </figure><!-- End of figure -->
-                                                </div>
-                                            </div>
-                                        </div><!-- End of col-sm-12 -->
-
-                                    </div>
-                                </div>
-                            </div><!-- End of col-sm-6 -->
-<!--
-                            <div class="col-md-6 col-sm-12 no-padding">
-                                <figure class="single_service single_service_img">
-                                    <div class="overlay-img"></div>
-                                    <img src="assets/images/servicerightimg.jpg" alt="" />
-                                </figure><!-- End of figure -->
-                            </div><!-- End of col-sm-6 -->
-
-                        </div>
-                    </div><!-- End of row -->
-                </div><!-- End of Container-fluid -->
-            </section><!-- End of service Section -->
-
-<!--
-            <section id="portfolio" class="portfolio sections">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="main_portfolio">
-                            <div class="col-sm-12">
-                                <div class="head_title text-center">
-                                    <h2>RECENT WORKS</h2>
-                                    <div class="subtitle">
-                                        It has survived not only five centuries, but also the leap scrambled it to make a type.
-                                    </div>
-                                    <div class="separator"></div>
-                                </div>
-                            </div>
-                            <div class="work_menu text-center">
-                                <div id="filters" class="toolbar mb2 mt2">
-                                    <button class="btn-md fil-cat filter active" data-filter="all">ALL</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="web" data-filter=".web">WEB DESIGN</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="design" data-filter=".design">PRINT DESIGN</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="flyers" data-filter=".flyers">ANIMATION</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="bcards" data-filter=".bcards">ART</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="photo" data-filter=".photo">PHOTOGRAPHY</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="video" data-filter=".video">VIDEO</button>
-                                </div> 
-
-                            </div>
-
-                            <div style="clear:both;"></div>     
-                            <div id="portfoliowork"> 
-                                <div class="single_portfolio tile scale-anm web grid-item-width2 video" >
-                                    <img src="assets/images/pf1.jpg" alt="" />
-                                    <a href="assets/images/pf1.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm bcards photo" >
-                                    <img src="assets/images/pf2.jpg" alt="" />
-                                    <a href="assets/images/pf2.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm web video">
-                                    <img src="assets/images/pf3.jpg" alt="" />
-                                    <a href="assets/images/pf3.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm web photo" >
-                                    <img src="assets/images/pf4.jpg" alt="" />
-                                    <a href="assets/images/pf4.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm bcards design" >
-                                    <img src="assets/images/pf5.jpg" alt="" />  
-                                    <a href="assets/images/pf5.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="single_portfolio tile scale-anm flyers video design">
-                                    <img src="assets/images/pf6.jpg" alt="" />
-                                    <a href="assets/images/pf6.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm photo flyers">
-                                    <img src="assets/images/pf7.jpg" alt="" />
-                                    <a href="assets/images/pf7.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="single_portfolio tile scale-anm bcards video" >
-                                    <img src="assets/images/pf8.jpg" alt="" />
-                                    <a href="assets/images/pf8.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                            <div style="clear:both;"></div>  
-                        </div>
-                    </div>
-                </div><!-- End off container --> 
-            </section> <!-- End off Work Section -->            
-
-
-
-            <!-- Study Section --> 
-			<!--
-            <section id="study" class="study text-center wow fadeIn"  data-wow-duration="2s" data-wow-dealy="1.5s">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_study_area sections">
-                            <div class="head_title text-center">
-                                <h2>CASE STUDY</h2>
-                                <div class="subtitle">
-                                    A brief story about how this process works, keep an eye till the end.
-                                </div>
-                                <div class="separator"></div>
-                            </div>
-                            <div class="single_study_content">
-                                <div class="col-sm-6">
-                                    <div class="single_study_slid_area">
-
-                                        <div class="single_study_text">
-                                            <div class="study_slider"> 
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
-
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
-
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
-
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="single_study_right_img">
-                                    <div class="col-sm-6">
-                                        <div class="single_study_img">
-                                            <img src="assets/images/study.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End off row --> 
-                </div><!-- End off Container --> 
-            </section><!-- End off Study Section --> 
-
-
-            <!-- Counter Section --> 
-			<!--
-            <section id="counter" class="counter">
-                <div class="video_overlay">
-                    <div class="container">
-                        <div class="row">  
-                            <div class="col-sm-12">               
-                                <div class="main_counter_area text-center">
-
-                                    <div class="row">
-                                        <div class="single_counter border_right">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-thumbs-up"></i>
-                                                    <h2 class="statistic-counter">3891</h2>
-                                                    <h4 class="">User Favourites</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-business-3"></i>
-                                                    <h2 class="statistic-counter">281</h2>
-                                                    <h4 class="">Posts Last 24 Hours</h4>  
-                                                </div>
-                                            </div>
-                                        </div> 
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-people-32"></i>
-                                                    <h2 class="statistic-counter">618</h2>
-                                                    <h4 class="">Total Posts</h4>  
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-cup"></i>
-                                                    <h2 class="statistic-counter">178</h2>
-                                                    <h4 class="">Amazing Features</h4>
-
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End off container --> 
-            </section>   <!-- End of counter section -->
+          
 
             <!-- Pricing Section -->
             <section id="pricing" class="pricing">
@@ -769,243 +302,12 @@
                 </div>
             </section><!-- End off Team Section -->
             
-            <!-- Counter Section --> 
-            <section id="counter" class="counter">
-                <div class="video_overlay">
-                    <div class="container">
-                    <div class="row">  
-                        <div class="head_title textwhite text-center margin-top-80">
-                                    <h2>Overall statistics</h2>
-                                    <div class="subtitle">
-                                        A few numbers if you're into that sort of thing
-                                        
-                                    </div>
-                                    <div class="separator"></div>
-                                </div>
-                                
-                            <div class="col-sm-12">               
-                                <div class="main_counter_area text-center">
-                                    <div class="row">
-                                        <div class="single_counter border_right">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-thumbs-up"></i>
-                                                    <h2 class="statistic-counter">3891</h2>
-                                                    <h4 class="">Ratings Given</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-business-3"></i>
-                                                    <h2 class="statistic-counter">281</h2>
-                                                    <h4 class="">Total events listed this year</h4>  
-                                                </div>
-                                            </div>
-                                        </div> 
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-people-32"></i>
-                                                    <h2 class="statistic-counter">618</h2>
-                                                    <h4 class="">Sign-ups</h4>  
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-cup"></i>
-                                                    <h2 class="statistic-counter">178</h2>
-                                                    <h4 class="">times we've stopped for coffee</h4>
-
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>   <!-- End of counter section -->
+            
 
 
 
 
-            <!-- Client Logo Section -->
-			<!--
-            <section id="clogo" class="clogo">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_clogo sections text-center">
-                            <div class="head_title text-center">
-                                <h2>Great Integrations with Others</h2>
-                                <div class="subtitle">
-                                    Suspendisse sed eros mollis, tincidunt felis eget, interdum erat. 
-                                    Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec. 
-                                </div>
-                                <div class="separator"></div>
-                            </div><!-- End off Head_title -->
-							<!--
-
-                            <div class="col-sm-3 col-xs-6"> 
-                                <a href=""><img src="assets/images/clogo1.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6"> 
-                                <a href=""><img src="assets/images/clogo2.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6"> 
-                                <a href=""><img src="assets/images/clogo3.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <a href=""><img src="assets/images/clogo4.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6"> 
-                                <a href=""><img src="assets/images/clogo5.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <a href=""><img src="assets/images/clogo6.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6"> 
-                                <a href=""><img src="assets/images/clogo9.png" alt="" /></a>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <a href=""><img src="assets/images/clogo8.png" alt="" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="divider"></div>
-            </section><!-- End off clogo Section -->
-
-
-            <!-- Blog Section 
-			
-            <section id="blog" class="blog">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="main_blog sections">
-                            <div class="head_title text-center">
-							<!--
-                                <h2>OUR BLOG</h2>
-                                <div class="subtitle">
-                                    Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio. 
-                                </div>
-                                <div class="separator"></div>
-                            </div>
-
-                            <div class="main_blog_content">
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_img">
-                                                    <img src="assets/images/blog1.jpg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left">
-                                                    <p>art/t-shirt</p>
-                                                    <h3>T-SHIRT DESIGN</h3>
-                                                    <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an unknown printer took a galley of type 
-                                                        a scrambled it to make a type specimen book.</p>
-
-                                                    <a href="" class="read_more">Read More >></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_img">
-                                                    <img src="assets/images/blog2.jpg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left">
-                                                    <p>art/t-shirt</p>
-                                                    <h3>T-SHIRT DESIGN</h3>
-                                                    <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an unknown printer took a galley of type 
-                                                        a scrambled it to make a type specimen book.</p>
-
-                                                    <a href="" class="read_more">Read More >></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-
-                                            <div class="col-sm-6 col-sm-push-6 no-padding">
-                                                <div class="single_blog_img">
-                                                    <img src="assets/images/blog3.jpg" alt="" />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right">
-                                                    <p>art/t-shirt</p>
-                                                    <h3>T-SHIRT DESIGN</h3>
-                                                    <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an unknown printer took a galley of type 
-                                                        a scrambled it to make a type specimen book.</p>
-
-                                                    <a href="" class="read_more">Read More >></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-sm-push-6 no-padding">
-                                                <div class="single_blog_img">
-                                                    <img src="assets/images/blog4.jpg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right">
-                                                    <p>art/t-shirt</p>
-                                                    <h3>T-SHIRT DESIGN</h3>
-                                                    <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an unknown printer took a galley of type 
-                                                        a scrambled it to make a type specimen book.</p>
-
-                                                    <a href="" class="read_more">Read More >></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section> --->
+            
 
 
             <section id="contact" class="contact">
@@ -1110,9 +412,9 @@
                             <div class="row">
                                 <div class="main_trial">
                                     <div class="col-sm-12">
-                                        <h2>Let's Register NOW. <span>It's FREE!</span></h2>
+                                        <h2>SignUp Now <span>It's FREE!</span></h2>
                                         <h4>free today, free tomorrow, free forever</h4>
-                                        <a href="login.html" class="btn btn-lg">Register</a>
+                                        <a href="login.html" class="btn btn-lg">SignUp</a>
                                     </div>
                                 </div>
                             </div>
@@ -1122,7 +424,7 @@
             </section><!-- End of Trial section -->
 
 
-            <!--Footer section-->
+           <!--Footer section-->
             <section class="footer">
                 <div class="container">
                     <div class="row">
@@ -1133,16 +435,14 @@
                                         <div class="flowus">
                                             <a href=""><i class="fa fa-facebook"></i></a>
                                             <a href=""><i class="fa fa-twitter"></i></a>
-                                            <a href=""><i class="fa fa-google-plus"></i></a>
                                             <a href=""><i class="fa fa-instagram"></i></a>
-                                            <a href=""><i class="fa fa-youtube"></i></a>
-                                            <a href=""><i class="fa fa-dribbble"></i></a>
+                    
                                         </div>
                                     </div>
 
                                     <div class="col-sm-6 col-xs-12">
                                         <div class="copyright_text">
-                                            <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="https://facebook.com/aidanmaher123"> Aido180</a>2017. All Rights Reserved</p>
+                                            <p class=" wow fadeInRight" data-wow-duration="1s">Made By Team Cherry </a>2017. All Rights Reserved</p>
                                         </div>
                                     </div>
                                 </div>

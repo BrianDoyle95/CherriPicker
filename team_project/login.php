@@ -48,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           
             <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Student Email Address<span class="req">*</span>
             </label>
-            <input type="email" required autocomplete="off" name="email"/>
+            <input type="email"  required autocomplete="off" name="email"/>
           </div>
           
           <div class="field-wrap">
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
           
         <div id="signup">   
-          <h1>Sign Up for Project Cherry</h1>
+          <h1>Sign Up!</h1>
           
           <form action="login.php" method="post" autocomplete="off">
           
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Student Email Address<span class="req">*</span>
             </label>
             <input type="email"required autocomplete="off" name='email' />
           </div>

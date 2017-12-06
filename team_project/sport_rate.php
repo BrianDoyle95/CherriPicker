@@ -17,6 +17,6 @@ if(isset($_GET['sport'], $_GET['rating'])) {
 
 	}
 
-	header('Location: sport_event.php?id=' . $event);
+	header('Location: SportEvent.php?id=' . $event);
 }
 ?>

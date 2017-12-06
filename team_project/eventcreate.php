@@ -38,7 +38,9 @@ if ( $_SESSION['logged_in'] != 1 ) {
   height: 300px;
   border: 1px solid #000;
 }
-
+.text-center{
+    color:black;
+}
       
         </style>
 
@@ -117,11 +119,14 @@ if ( $_SESSION['logged_in'] != 1 ) {
           
             
 				<form action="InsertEvents/insertcultevent.php" method="POST" enctype="multipart/form-data">
+				    
+                           <h2 class="text-center">Create A Culture Event</h2>
+                           
 					<div class="col-sm-12">
 						<div class="form-group row">
                           <label for="example-text-input" class="col-2 col-form-label">Event Name</label>
                           <div class="col-10">
-                        <input class="form-control" name="CultName" required autocomplete="off" type="text" placeholder="Enter Event Name Here .." id="example-text-input">
+                        <input class="form-control" name="CultName" required autocomplete="off" type="text" placeholder="Enter Event Name Here ..." id="example-text-input">
                           </div>
                         </div>
 					 <div class="form-group row">
@@ -175,6 +180,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                       
 					<br/>
 					<input type="submit" class="btn" value="Create Culture Event"/>
+					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
 					</div>
 				</form> 
 				</div>
@@ -199,6 +205,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
           
             
 				<form action="InsertEvents/insertsportevent.php" method="POST" enctype="multipart/form-data">
+				    <h2 class="text-center">Create A Sport Event</h2>
 					<div class="col-sm-12">
 						<div class="form-group row">
                           <label for="example-text-input" class="col-2 col-form-label">Event Name</label>
@@ -209,7 +216,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 					 <div class="form-group row">
                           <label for="example-address-input" class="col-2 col-form-label">Event Location</label>
                          <div class="col-10">
-                        <input class="form-control" name="SportLocation" type="text" placeholder="Full address..." required autocomplete="off" >
+                        <input class="form-control" name="SportLocation" type="text" placeholder="Location of Event ..." required autocomplete="off" >
                         </div>
                     </div>
                     <div class="form-group row">
@@ -255,7 +262,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                       
 					<br/>
 					<input type="submit" class="btn" value="Create Sport Event"/>
-					
+					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
 					
 					</div>
 				</form> 
@@ -280,6 +287,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
           
             
 				<form action="InsertEvents/insertnightevent.php" method="POST" enctype="multipart/form-data">
+				    <h2 class="text-center">Create A Nightlife Event</h2>
 					<div class="col-sm-12">
 						<div class="form-group row">
                           <label for="example-text-input" class="col-2 col-form-label">Event Name</label>
@@ -290,7 +298,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 					 <div class="form-group row">
                           <label for="example-address-input" class="col-2 col-form-label">Event Location</label>
                          <div class="col-10">
-                        <input class="form-control" name="NightLocation" type="text" placeholder="Full address..." required autocomplete="off">
+                        <input class="form-control" name="NightLocation" type="text" placeholder="Location of Event ..." required autocomplete="off">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -337,7 +345,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                       
 					<br/>
 					<input type="submit" class="btn" value="Create NightLife Event"/>
-					
+					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
 					
 					</div>
 				</form> 

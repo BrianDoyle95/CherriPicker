@@ -18,6 +18,6 @@ if(isset($_GET['culture'], $_GET['rating'])) {
 
 	}
 
-	header('Location: culture_event.php?id=' . $event);
+	header('Location: CultureEvent.php?id=' . $event);
 }
 ?>

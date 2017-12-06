@@ -1,3 +1,24 @@
+<?php
+session_start();
+require 'dbh1.php';
+
+$mysqli = mysqli_connect($host, $user, $pass, $db);
+if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
+
+
+ if(isset($_GET['id'])) {
+
+          $id = (int)$_GET['id'];
+
+    $query = "select * from Nightlife where NightID = {$id}";
+     $result = mysqli_query($mysqli, $query); 
+ }
+
+
+
+?>
+
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -6,7 +27,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Project Cherry - Event</title>
+        <title>Nightlife - Event</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -58,7 +79,7 @@
                                                 <span class="icon-bar"></span>
                                             </button>
                                             <a class="navbar-brand" href="#home">
-                                                <!-- <img src="assets/images/logo.png"/> --> Project Cherry
+                                               
                                             </a>
                                         </div>
 
@@ -69,13 +90,18 @@
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                                             <ul class="nav navbar-nav navbar-right">
-                                                <li><a href="#home">HOME</a></li>
-                                                <li><a href="#history">ABOUT US</a></li>
-                                                <li><a href="#portfolio">PORTFOLIO</a></li>
-                                                <li><a href="#pricing">PRICING</a></li>
-                                                <li><a href="#team">TEAM</a></li>
-                                                <li><a href="#blog">BLOG</a></li>
-                                                <li><a href="#contact">CONTACT</a></li>
+                                                <li><a href="index.php">HOME</a></li>
+                                                <li><a href="Culture.php">CULTURE</a></li>
+                                                <li><a href="NightLife.php">NIGHTLIFE</a></li>
+                                                <li><a href="Sport.php">SPORT</a></li>
+                                                 <?php 
+                                                    if (isset ($_SESSION['logged_in'] )) {
+                                                       echo '<li><a href="eventcreate.php">Create Event</a></li>
+                                                            <li><a href="logout.php">LOGOUT</a></li>';
+                                                    } else {
+                                                      echo  '<li><a href="login.php">LOGIN / SIGNUP</a></li>';
+                                                    }
+                                                ?> 
                                             </ul>
 
 
@@ -95,35 +121,47 @@
             <br/>
             <!-- History section -->
 			
+			
+			<?php 
+                                         if(isset($_GET['id'])) {
+
+                                         $id = (int)$_GET['id'];
+
+                                         $query = "select * from Nightlife where NightID = {$id}";
+                                         $result = mysqli_query($mysqli, $query); 
+ 
+
+                                        while($row = mysqli_fetch_array($result))
+                                        {  ?>
             <section id="history" class="history sections">
                 <div class="container">
                     <div class="row">
                         <div class="main_history">
                             <div class="col-sm-5">
                                 <div class="single_history_img">
-                                    <img src="assets/images/stab1.png" alt="" />
+                                     <?php echo '<img src="data:image/jpeg;base64,' . base64_encode( $row['NightImage'] ) . '" />'; ?> 
                                 </div>
                             </div>
 
                             <div class="col-sm-7">
                                 <div class="single_history_content">
                                     <div class="head_title">
-                                        <h2>NightLife Event</h2>
+                                        
+                                       
+                                        <h2><?php echo $row['NightName'] ?></h2>
                                     </div>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page 
-                                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-                                        distribution of letters, as opposed to using 'Content here, content here', making it 
-                                        look like readable English. Many desktop publishing packages and web page editors now use 
-                                        Lorem Ipsum as their default model text, and a search for 'lorem ipsum' </p>
-
-                                    
+                                    <h4><strong> DESCRIPTION : </strong><br/><?php echo $row['NightDesc'] ?></h4>
+                                     <h4><strong> LOCATION: </strong><br/><?php echo $row['NightLocation'] ?></h4>
+                                     <h4><strong> DATE : </strong><?php echo $row['NightDate'] ?></h4>
+                                     <h4><strong> TIME : </strong><?php echo $row['NightTime'] ?> - <?php echo $row['NightEnd'] ?></h4>
+                                         
                                 </div>
                             </div>
                         </div>
                     </div><!--End of row -->
                 </div><!--End of container -->
             </section><!--End of history -->
-
+                    <?php  } } ?>
 
             
 
@@ -132,111 +170,163 @@
 
 
 
+
+                <?php
+                                                    require_once 'app/init.php';
+
+$event = null;
+
+if(isset($_GET['id'])) {
+
+    $id = (int)$_GET['id'];
+
+    $event = $db->query("
+        SELECT Nightlife.NightID, Nightlife.NightName, AVG(nightlife_ratings.rating) AS rating
+        FROM Nightlife
+        LEFT JOIN nightlife_ratings
+        ON Nightlife.NightID = nightlife_ratings.nightlife
+        WHERE Nightlife.NightID = {$id}
+    ")->fetch_object();
+
+}
+
+?>
+
+<?php if($event): ?>
+                                                    
             <!-- Study Section --> 
             <section id="study" class="study text-center wow fadeIn"  data-wow-duration="2s" data-wow-dealy="1.5s">
                 <div class="container">
                     <div class="row">
                         <div class="main_study_area sections">
                             <div class="head_title text-center">
-                                <h2>About the Event</h2>
-                                <div class="subtitle">
-                                    A brief story about how this process works, keep an eye till the end.
-                                </div>
+                                <h2><?php echo $event->NightName; ?> Rating</h2>
+                              
                                 <div class="separator"></div>
                             </div>
-                            <div class="single_study_content">
-                                <div class="col-sm-6">
-                                    <div class="single_study_slid_area">
+                            <div class="text-center">
+                                <div class="col-sm-12">
+                                                    
+ 
+                <h4><strong>Average Rating: </strong><?php echo $event->rating; ?>/5</h4>
+                
+                
+                   <h4 class="text-center"><strong>Rate this event out of 5: </strong></h4>
+                    <h3><?php foreach(range(1, 5) as $rating): ?>
+                       <a href="nightlife_rate.php?nightlife=<?php echo $event->NightID; ?>&rating=<?php echo $rating; ?>"><?php echo $rating; ?></a>
+                    <?php endforeach; ?> </h3>
+                
+            
+        <?php endif; ?>
+          
+          
+          
+         
 
-                                        <div class="single_study_text">
-                                            <div class="study_slider"> 
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
 
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
+    
+    
+ 
 
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="s_study_icon">
-                                                        <i class="fa fa-lightbulb-o"></i>  
-                                                    </div>
-                                                    <h4>aCCUMULATE CREATIVE IDEAS</h4>
-                                                    <div class="separator3"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting let.
-                                                        Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p>
 
-                                                    <a href="" class="btn btn-lg">read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
+
+
+
+
+
+
+
+
+                                                    
+
+                                            
+                                        
                                     </div>
                                 </div>
 
 
-                                <div class="single_study_right_img">
-                                    <div class="col-sm-6">
-                                        <div class="single_study_img">
-                                            <img src="assets/images/study.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div><!-- End off row --> 
-                </div><!-- End off Container --> 
+                <!-- End off Container --> 
             </section><!-- End off Study Section --> 
             
             
             
-            <!-- Pricing Section -->
-            <section id="pricing" class="pricing">
-                <div class="container">
+            <section id="portfolio" class="portfolio sections">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="main_pricing_area sections">
-                            <div class="head_title text-center">
-                                <h2>Social Media</h2>
-                                <div class="subtitle">
-                                    A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.
+                        <div class="main_portfolio">
+                            <div class="col-sm-12">
+             <div class="head_title text-center grey">
+                                    <h2>Event Location on Map</h2>
+                                 <div class="separator"></div>
+                                   <div class="container">
+                                       <div id="map_canvas" style="width:100%;height:500px;border:solid black 1px;"></div>
+                                   </div>
+                                   </div>
+                                  </div>
+                                 </div>
                                 </div>
-                                <div class="separator"></div>
-                            </div><!-- End off Head_title -->
+                                </div>
+                            </section>
+                                      <script type="text/javascript">
+                                    
+                            var map;
+                            function myMap() {
+                                // Set static latitude, longitude value
+                                var latlng = new google.maps.LatLng(53.34881739, -6.24317930);
+                                // Set map options
+                                var myOptions = {
+                                    zoom: 13,
+                                    center: latlng,
+                                    panControl: true,
+                                    zoomControl: true,
+                                    scaleControl: true,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                }
+                                
+                                // Create map object with options
+                                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                                
+                            
+                                         <?php
+                                             if(isset($_GET['id'])) {
 
-                            <div class="col-md-4 col-sm-6">
+                                            $id = (int)$_GET['id'];
 
-                                       <a class="twitter-timeline" data-width="400" data-height="700" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                    </div>
-
-                               
-                           
-                            <div class="col-md-4 col-sm-6">
-
-                            </div> <!-- End off col-md-4 -->
-                            <div class="col-md-4 col-sm-6">
-                               <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="400" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-                            </div> <!-- End off col-md-4 -->
-                        </div>
-                    </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section><!-- End off Pricing Section -->
+                                              $query = "select * from Nightlife where NightID = {$id}";
+                                             $result = mysqli_query($mysqli, $query); 
+                                                         
+                                             while($row = mysqli_fetch_array($result))
+                                                 { 
+                                              echo "addMarker(new google.maps.LatLng(".$row['Nightlat'].", ".$row['Nightlng']."), map);"; 
+                                                } 
+                                             }
+                                            ?>
+                                                
+                                                
+                            
+                            function addMarker(latLng, map) {
+                                var marker = new google.maps.Marker({
+                                    position: latLng,
+                                    map: map,
+                                    draggable: true,
+                                    animation: google.maps.Animation.DROP
+                                });
+                    
+                                return marker;
+                            }
+                        }
+                    
+                        </script>  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdjYxIyEZe32zVZvn3UqVEdne3tpYkvf0&callback=myMap"></script>
+                                        
+                                        
+                                        
+                                        
+                                        
+            
 
 
             <!-- Counter Section --> 
@@ -313,16 +403,14 @@
                                         <div class="flowus">
                                             <a href=""><i class="fa fa-facebook"></i></a>
                                             <a href=""><i class="fa fa-twitter"></i></a>
-                                            <a href=""><i class="fa fa-google-plus"></i></a>
                                             <a href=""><i class="fa fa-instagram"></i></a>
-                                            <a href=""><i class="fa fa-youtube"></i></a>
-                                            <a href=""><i class="fa fa-dribbble"></i></a>
+                    
                                         </div>
                                     </div>
 
                                     <div class="col-sm-6 col-xs-12">
                                         <div class="copyright_text">
-                                            <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="https://facebook.com/aidanmaher123"> Aido180</a>2017. All Rights Reserved</p>
+                                            <p class=" wow fadeInRight" data-wow-duration="1s">Made By Team Cherry </a>2017. All Rights Reserved</p>
                                         </div>
                                     </div>
                                 </div>
@@ -344,15 +432,7 @@
 
         </div>
 
-        <!-- Facebook  -->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
-         fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+        
             
             
         <!-- START SCROLL TO TOP  -->
