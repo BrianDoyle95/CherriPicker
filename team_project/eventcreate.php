@@ -15,7 +15,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 
          <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Project Cherry - Create Event</title>
+        <title>Cherri Picker - Create Event</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,25 +24,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
         <!--Google Fonts link-->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
-        <style>
-         #map {
-  height: 300px;
-  border: 1px solid #000;
-}
-      
-  #map1{
-  height: 300px;
-  border: 1px solid #000;
-}
- #map2{
-  height: 300px;
-  border: 1px solid #000;
-}
-.text-center{
-    color:black;
-}
-      
-        </style>
+        
 
         <link rel="stylesheet" href="assets/css/iconfont.css">
         <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -60,6 +42,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 
         <!--Theme custom css -->
         <link rel="stylesheet" href="assets/css/event1.css">
+        
 
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -72,11 +55,45 @@ if ( $_SESSION['logged_in'] != 1 ) {
    
     
     
-<body >
+<body>
     
+
+                              <div class="nav1">
+                                <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                                    <div class="container">
+                                       
+                                        
+                                        <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
+                                            <ul class="nav navbar-nav navbar-right ">
+                                                <li><a href="index.php" class="red">HOME</a></li>
+                                                 <li><a href="Culture.php">CULTURE</a></li> 
+                                                <li><a href="Sport.php">SPORT</a></li>
+                                                <li><a href="NightLife.php">NIGHTLIFE</a></li>
+                                                
+                                                <?php 
+                                                    if (isset ($_SESSION['logged_in'] )) {
+                                                       echo '<li><a href="eventcreate.php">CREATE EVENT</a></li>
+                                                            <li><a href="logout.php">LOGOUT</a></li>';
+                                                    } else {
+                                                      echo  '<li><a href="login.php">LOGIN / SIGNUP</a></li>';
+                                                    }
+                                                ?> 
+                                                
+                                            </ul>
+                                                
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+          
+          
+            
+
      
-    
- <div class="container" >
+     
+     
+ <div class="top">
+ <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="contact_contant sections">
@@ -93,19 +110,19 @@ if ( $_SESSION['logged_in'] != 1 ) {
                                     <option value="blue">NightLife Event</option>
                                 </select>
                                 </div>
-                                 <div class="separator"></div>
+                                 
                                 </div><!-- End off Head_title -->
                                 
 </div>
 </div>
 </div>
 </div>
-    
+ </div>  
     
    
 
 
-
+<div class="container">
 <div class="red box">
 <section>
           
@@ -139,7 +156,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                         <label for="example-address-input" class="col-2 col-form-label">Move the Marker to Event Location</label>
                             <div class="col-10">
                                <div id="map"></div>
-                           <input class="form-control" name="Cultlat" id="Cultlat" required autocomplete="off"> <input class="form-control" name="Cultlng"  id="Cultlng" required autocomplete="off">
+                           <input class="form-control" name="Cultlat" id="Cultlat" required autocomplete="off"> </br><input class="form-control" name="Cultlng"  id="Cultlng" required autocomplete="off">
                       </div>
                     </div>	
                     
@@ -173,14 +190,14 @@ if ( $_SESSION['logged_in'] != 1 ) {
 						
 							<div class="form-group row">
                             <label>Event Image</label>
-                                 <input type="file" name="CultImage">
+                                 <input type="file" name="CultImage" > <p>(Max Size: 2,048KiB)</p>
                       </div>
                       
                       
                       
 					<br/>
 					<input type="submit" class="btn" value="Create Culture Event"/>
-					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
+					
 					</div>
 				</form> 
 				</div>
@@ -223,7 +240,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                         <label for="example-address-input" class="col-2 col-form-label">Move the Marker to Event Location</label>
                             <div class="col-10">
                                <div id="map1"></div>
-                           <input class="form-control" name="Sportlat" id="Sportlat"> <input class="form-control" name="Sportlng"  id="Sportlng">
+                           <input class="form-control" name="Sportlat" id="Sportlat">  </br><input class="form-control" name="Sportlng"  id="Sportlng">
                       </div>
                     </div>	
                     
@@ -257,12 +274,12 @@ if ( $_SESSION['logged_in'] != 1 ) {
 						
 							<div class="form-group row">
                             <label>Event Image</label>
-                                 <input type="file" name="SportImage"/>
+                                 <input type="file" name="SportImage"/> <p>(Max Size: 2,048KiB)</p>
                       </div>
                       
 					<br/>
 					<input type="submit" class="btn" value="Create Sport Event"/>
-					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
+					 
 					
 					</div>
 				</form> 
@@ -305,7 +322,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
                         <label for="example-address-input" class="col-2 col-form-label">Move the Marker to Event Location</label>
                             <div class="col-10">
                                <div id="map2"></div>
-                           <input class="form-control" name="Nightlat" id="Nightlat"> <input class="form-control" name="Nightlng"  id="Nightlng">
+                           <input class="form-control" name="Nightlat" id="Nightlat">  </br><input class="form-control" name="Nightlng"  id="Nightlng">
                       </div>
                     </div>	
                     
@@ -338,14 +355,14 @@ if ( $_SESSION['logged_in'] != 1 ) {
                         
 								<div class="form-group row">
                             <label>Event Image</label>
-                                 <input type="file" name="NightImage"/>
+                                 <input type="file" name="NightImage"/> <p>(Max Size: 2,048KiB)</p>
                       </div>
                       
                       
                       
 					<br/>
 					<input type="submit" class="btn" value="Create NightLife Event"/>
-					<a href="index.php"><button style="float:right" type="button" class="btn">Home</button></a> 
+					
 					
 					</div>
 				</form> 
@@ -355,11 +372,10 @@ if ( $_SESSION['logged_in'] != 1 ) {
 	</div>
  </section>
  </div>
+</div>
 
-
-           
-
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+      
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAdjYxIyEZe32zVZvn3UqVEdne3tpYkvf0&"></script>
 <script>
     /* global google */
     var map, map1, map2;

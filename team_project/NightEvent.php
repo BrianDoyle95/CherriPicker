@@ -20,10 +20,8 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
 
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<html class="no-js" lang=""> 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -210,11 +208,19 @@ if(isset($_GET['id'])) {
  
                 <h4><strong>Average Rating: </strong><?php echo $event->rating; ?>/5</h4>
                 
-                
-                   <h4 class="text-center"><strong>Rate this event out of 5: </strong></h4>
-                    <h3><?php foreach(range(1, 5) as $rating): ?>
-                       <a href="nightlife_rate.php?nightlife=<?php echo $event->NightID; ?>&rating=<?php echo $rating; ?>"><?php echo $rating; ?></a>
-                    <?php endforeach; ?> </h3>
+                         <?php 
+                                                    if (isset ($_SESSION['logged_in'] )) {
+                                                       echo ' <h4 class="text-center"><strong>Rate this event out of 5: </strong></h4> ' ?><?php foreach(range(1, 5) as $rating): ?>
+                                                        <?php echo '<h3><a href="nightlife_rate.php?nightlife=' ?><?php echo $event->NightID; ?>&rating=<?php echo $rating; ?>"><?php echo $rating; ?><?php echo'</a></h3>'?> 
+                    <?php endforeach; ?>
+                    
+                                             <?php       } else {
+                                                       echo  ' 
+                    <h4> Please <a href="login.php">Log In or Sign Up </a> to rate this Event
+                        </h4>';
+                                                    }
+                                                ?> 
+                   
                 
             
         <?php endif; ?>
@@ -325,69 +331,6 @@ if(isset($_GET['id'])) {
                                         
                                         
                                         
-                                        
-            
-
-
-            <!-- Counter Section --> 
-            <section id="counter" class="counter">
-                <div class="video_overlay">
-                    <div class="container">
-                        <div class="row">  
-                            <div class="col-sm-12">               
-                                <div class="main_counter_area text-center">
-
-                                    <div class="row">
-                                        <div class="single_counter border_right">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-thumbs-up"></i>
-                                                    <h2 class="statistic-counter">3891</h2>
-                                                    <h4 class="">User Favourites</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-business-3"></i>
-                                                    <h2 class="statistic-counter">281</h2>
-                                                    <h4 class="">Posts Last 24 Hours</h4>  
-                                                </div>
-                                            </div>
-                                        </div> 
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-people-32"></i>
-                                                    <h2 class="statistic-counter">618</h2>
-                                                    <h4 class="">Total Posts</h4>  
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-cup"></i>
-                                                    <h2 class="statistic-counter">178</h2>
-                                                    <h4 class="">Amazing Features</h4>
-
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End off container --> 
-            </section>   <!-- End of counter section -->
-
-         
 
            
             

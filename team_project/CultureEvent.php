@@ -20,10 +20,8 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
 
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+ <html class="no-js" lang=""> 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -173,7 +171,7 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
 
                 <?php
                                                     require_once 'app/init.php';
-
++
 $event = null;
 
 if(isset($_GET['id'])) {
@@ -209,11 +207,19 @@ if(isset($_GET['id'])) {
  
                 <h4><strong>Average Rating: </strong><?php echo $event->rating; ?>/5</h4>
                 
-                
-                   <h4 class="text-center"><strong>Rate this event out of 5: </strong></h4>
-                    <h3><?php foreach(range(1, 5) as $rating): ?>
-                       <a href="culture_rate.php?culture=<?php echo $event->CultID; ?>&rating=<?php echo $rating; ?>"><?php echo $rating; ?></a>
-                    <?php endforeach; ?> </h3>
+                         <?php 
+                                                    if (isset ($_SESSION['logged_in'] )) {
+                                                       echo ' <h4 class="text-center"><strong>Rate this event out of 5: </strong></h4> ' ?><?php foreach(range(1, 5) as $rating): ?>
+                                                        <?php echo '<h3><a href="culture_rate.php?culture=' ?><?php echo $event->CultID; ?>&rating=<?php echo $rating; ?>"><?php echo $rating; ?><?php echo'</a></h3>'?> 
+                    <?php endforeach; ?>
+                    
+                                             <?php       } else {
+                                                       echo  ' 
+                    <h4> Please <a href="login.php">Log In or Sign Up </a> to rate this Event
+                        </h4>';
+                                                    }
+                                                ?> 
+                   
                 
             
         <?php endif; ?>

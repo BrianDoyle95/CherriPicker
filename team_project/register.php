@@ -1,6 +1,5 @@
 <?php
 /* Registration process, inserts user info into the database 
-   and sends account confirmation email message
  */
 
 // Set session variables to be used on profile.php page
@@ -27,14 +26,14 @@ if ( $result->num_rows > 0 ) {
 }
 else { // Email doesn't already exist in a database, proceed...
 
-    // active is 0 by DEFAULT (no need to include it here)
+    
     $sql = "INSERT INTO users (first_name, last_name, email, password, hash) " 
             . "VALUES ('$first_name','$last_name','$email','$password', '$hash')";
 
     // Add user to the database
     if ( $mysqli->query($sql) ){
 
-        $_SESSION['active'] = 1; //0 until user activates their account with verify.php
+        $_SESSION['active'] = 1; 
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         
                 

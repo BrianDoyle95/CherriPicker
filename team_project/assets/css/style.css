@@ -698,7 +698,7 @@ input::-ms-input-placeholder {
 }
 /*home section*/
 .home{
-    background: url(../images/homebg.jpg) no-repeat center center;
+    background: url(../images/event1.jpg) no-repeat center center;
     background-size: cover;
 }
 .home_skew_border{
@@ -1412,7 +1412,7 @@ li .single_team_text p{
                         Trail Section 
 ======================================================================*/
 .main_trial_area{
-    background: url(../images/trailbg.jpg) no-repeat top center;
+    background: url(../images/ev.jpg) no-repeat top center;
     overflow: hidden;
     background-size: cover;
     color:#fff;

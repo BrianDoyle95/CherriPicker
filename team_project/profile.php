@@ -30,7 +30,7 @@ else {
 
           <h1>Welcome</h1>
           
-          <p> You  have successfully created a Project Cherry Account</p>
+          <p> You  have successfully created a Cherri Picker Account</p>
           <h2><?php echo $first_name.' '.$last_name; ?></h2>
           <p><?= $email ?></p>
           

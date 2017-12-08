@@ -6,9 +6,16 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Cherry - Sign-Up & Login Form</title>
   
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Cherri Picker - Login & SignUp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!--Google Fonts link-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/css/style4.css">
 </head>
@@ -42,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
       <div class="tab-content">
 
          <div id="login">   
-          <h1>Welcome Back!</h1>
+          <h1>Log In!</h1>
           
           <form action="login.php" method="post" autocomplete="off">
           
             <div class="field-wrap">
             <label>
-              Student Email Address<span class="req">*</span>
+              Email Address<span class="req">*</span>
             </label>
             <input type="email"  required autocomplete="off" name="email"/>
           </div>
@@ -91,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
           <div class="field-wrap">
             <label>
-              Student Email Address<span class="req">*</span>
+              Email Address<span class="req">*</span>
             </label>
             <input type="email"required autocomplete="off" name='email' />
           </div>
@@ -103,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <input type="password"required autocomplete="off" name='password'/>
           </div>
           
-          <button type="submit" class="button button-block" name="register" />Register</button>
+          <button type="submit" class="button button-block" name="register" />SIGN UP</button>
           
           </form>
 

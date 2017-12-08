@@ -1,11 +1,8 @@
 <?php
 session_start();
 require 'dbh1.php';
-
 $mysqli = mysqli_connect($host, $user, $pass, $db);
 if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
-
-
 ?>
 
 <!doctype html>
@@ -14,7 +11,7 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cherri Picker - NightLife</title>
+        <title>Cherri Picker - Nightlife</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -72,15 +69,10 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
                                                  <!--- <h3>Project Cherry</h3><img src="assets/images/logo.png"/> --->
                                             </a>
                                         </div>
-
                                         
-
-
-
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
                                             <ul class="nav navbar-nav navbar-right">
-                                                <li><a href="index.html">HOME</a></li>
+                                                <li><a href="index.php">HOME</a></li>
                                                  <li><a href="Culture.php">CULTURE</a></li> 
                                                 <li><a href="Sport.php">SPORT</a></li>
                                                 <li><a href="NightLife.php">NIGHTLIFE</a></li>
@@ -97,54 +89,17 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
                                             </ul>
                                                 
                                         </div>
-
                                     </div>
                                 </nav>
                             </div>	
                         </div>
-
                     </div>
-
                 </div>
             </header> <!--End of header -->
 
 
 
 
-
-            <!--home Section 
-            <section id="home" class="home">
-                <div class="overlay">
-                    <div class="home_skew_border">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12 ">
-                                    <div class="main_home_slider text-center">
-                                        <div class="single_home_slider">
-                                            <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                                <h3>The Best Events Are Our First Priority</h3>
-                                                <h1>WELCOME TO PROJECT CHERRY</h1>
-                                                <div class="separator"></div>
-                                                <p>Project Cherry is a beginning and end to figuring out what you're going to do today, 
-                                                    next weekend, and which race you're going to train for in 6 weeks time. 
-                                                    With us we inform you of the best events nearest to you.</p>
-                                                <div class="home_btn">
-                                                    <a href="Sport.html" target="_blank" class="btn btn-default ">Sport</a>
-                                                    <a href="NightLife.html" target="_blank" class="btn btn-default">NightLife</a>
-													<a href="Culture.html" target="_blank" class="btn btn-default">Culture</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--End of home section -->
 
 
             <section id="portfolio" class="portfolio sections">
@@ -153,7 +108,7 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
                         <div class="main_portfolio">
                             <div class="col-sm-12">
                                 <div class="head_title text-center grey">
-                                    <h2>Events Map</h2>
+                                    <h2>Nightlife Events Map</h2>
                                  <div class="separator"></div>
                                    <div class="container">
                                        <div id="map_canvas" style="width:100%;height:500px;border:solid black 1px;"></div>
@@ -197,6 +152,8 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
                                     draggable: true,
                                     animation: google.maps.Animation.DROP
                                 });
+                                
+                                
                     
                                 return marker;
                             }
@@ -211,7 +168,7 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
                             </div>
                             
                             <div class="text-center">
-                             <h2>All Events</h2>
+                             <h2>All Nightlife Events</h2>
                                  <div class="separator"></div></div>
                             
                             
@@ -260,64 +217,7 @@ if (!$mysqli) die("Unable to connect to MySQL: ". mysqli_error());
     
             
                   
-                    <!-- Counter Section --> 
-            <section id="counter" class="counter">
-                <div class="video_overlay">
-                    <div class="container">
-                        <div class="row">  
-                            <div class="col-sm-12">               
-                                <div class="main_counter_area text-center">
-
-                                    <div class="row">
-                                        <div class="single_counter border_right">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-thumbs-up"></i>
-                                                    <h2 class="statistic-counter">3891</h2>
-                                                    <h4 class="">User Favourites</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-business-3"></i>
-                                                    <h2 class="statistic-counter">281</h2>
-                                                    <h4 class="">Posts Last 24 Hours</h4>  
-                                                </div>
-                                            </div>
-                                        </div> 
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-people-32"></i>
-                                                    <h2 class="statistic-counter">618</h2>
-                                                    <h4 class="">Total Posts</h4>  
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="single_counter">
-                                            <div class="col-sm-3 col-xs-12">
-                                                <div class="single_counter_item">
-                                                    <i class="icon icon-cup"></i>
-                                                    <h2 class="statistic-counter">178</h2>
-                                                    <h4 class="">Amazing Features</h4>
-
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End off container --> 
-            </section>   <!-- End of counter section -->      
-
+              
 
             
 

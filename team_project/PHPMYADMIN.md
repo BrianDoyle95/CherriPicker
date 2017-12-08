@@ -6,4 +6,8 @@ UserName: x14322731
 Password : 
 
 
+Databases: cherrypickerdb (Events and Ratings)
+            accounts (User Accounts)
+            
+            
 
